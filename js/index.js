@@ -3,14 +3,14 @@ let logoTl = gsap.timeline({
   scrollTrigger: {
     trigger: document.body,
     start: 0,
-    end: () => window.innerHeight * 1.2,
+    end: () => window.innerHeight * 0.2,
     scrub: 0.6,
   },
 });
 logoTl.fromTo(
   ".logo",
   {
-    top: "20vw",
+    top: "15vw",
     yPercent: -50,
     scale: 1.7,
   },
@@ -26,16 +26,19 @@ const menuProject = document.querySelector(".menu-project");
 const menuAbout = document.querySelector(".menu-about");
 const messageWrap = document.querySelector(".message-wrap");
 const introWrap = document.querySelector(".intro-wrap");
+const menuWrap = document.querySelector(".menu-wrap");
 
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop;
 });
 
-const menuWrap = document.querySelector(".menu-wrap");
 
 window.onload = function () {
   window.addEventListener("scroll", () => {
-    let currentScrollValue = document.documentElement.scrollTop;
+    // let currentScrollValue = document.documentElement.scrollTop;
+    let currentScrollValue = window.pageYOffset;
+    
+    // if (currentScrollValue > screen.height) {
     if (currentScrollValue > introWrap.clientHeight) {
       menuWrap.classList.add("hide");
     } else {
@@ -43,6 +46,7 @@ window.onload = function () {
     }
   });
 };
+
 
 menuProject.addEventListener("click", () => {
   console.log("0");
@@ -70,3 +74,6 @@ logo.addEventListener("click", () => {
     block: "start",
   });
 });
+
+
+

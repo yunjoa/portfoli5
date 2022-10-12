@@ -1,52 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YUN JIHWA</title>
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <nav>
-      <div class="logo">Yun Jihwa</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YUN JIHWA</title>
+  <link rel="stylesheet" href="style/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Mrs+Sheppards&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+  
+  
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Yun Jihwa</div>
+    <h3>
+
       <div class="menu-wrap">
-        <div class="menu menu-project">
-          <a>project</a>
+        <div class="menu">
+          <a href="https://yunjoa.github.io" target="_blank">coding note</a>
         </div>
         <div class="menu menu-about">
           <a>about</a>
         </div>
+        <div class="menu menu-project">
+          <a>project</a>
+        </div>
+
       </div>
-    </nav>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <section class="intro-wrap">
-          <div data-speed="1.25" class="side-text left">Side text</div>
-          <div data-speed="1.25" class="side-text right">Side text</div>
-        </section>
-        <section class="message-wrap">Yun Jihwa.</section>
-        <section>message</section>
-        <section class="project-wrap">project</section>
-        <section class="about-wrap">about</section>
-        <section class="bot">
-          <footer>
-            <p>git</p>
-            <p>insta</p>
-            <p>© 2022 Yun Jihwa All rights reserved.</p>
-          </footer>
-        </section>
+  </nav>
+
+
+
+
+  <div class="smooth-content container">
+    <section class="intro-wrap">
+      <div data-speed="1.25" class="side-text left">
+        <a href="https://github.com/yunjoa" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/yun_joayo/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
       </div>
-    </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-  <script src="js/index.js"></script>
+      <div data-speed="1.25" class="side-text right">Publisher & FrontEnd</div>
+      <div class="introWord">The Port folio</div>
+      <div class="blob">
+        <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 310 350">
+          <path
+            d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z" />
+        </svg>
+      </div>
+    </section>
+    
+    <section class="message-wrap" data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+      <h1 data-scroll data-scroll-speed="3">Change background colour with GSAP ScrollTrigger</h1>
+      <img
+        src="https://images.pexels.com/photos/3062948/pexels-photo-3062948.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="">
+      Yun Jihwa.
+    </section>
+    <section data-bgcolor="#eacbd1" data-textcolor="#536fae">
+      <img
+          src="https://images.pexels.com/photos/4467879/pexels-photo-4467879.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="">
+        <h2 data-scroll data-scroll-speed="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </section>
+    <section data-bgcolor="#536fae" data-textcolor="#eacbd1">
+      message
+      <img
+          src="https://images.pexels.com/photos/5604966/pexels-photo-5604966.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="">
+        <h2 data-scroll data-scroll-speed="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </section>
+    <section class="project-wrap" data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+      project
+      <img
+          src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="">
+        <h2 data-scroll data-scroll-speed="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </section>
+    <section class="about-wrap">about</section>
+
+
+    <footer>
+      <div class="footerContents">
+        <div class="footerIntro">
+          <p><span class="pumping">yun jihwa</span></p>
+          <p>
+            MAKE WORK AWESOME
+          </p>
+          <p>
+            MAKE LIFESTYLE AWESOME
+          </p>
+          <p>
+            MAKE EVERYTHING AWESOME
+          </p>
+
+        </div>
+        <div class="footerLink">
+          <p>
+            <a href="https://github.com/yunjoa">GIT</a>
+          </p>
+          <p>
+            <a href="#">CONTACT</a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/yun_joayo/">
+              INSTAGRAM</a>
+          </p>
+        </div>
+      </div>
+      <p class="copyright">© 2022 Yun Jihwa All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+
+<script src="js/index.js"></script>
+<script src="js/clickEvent.js"></script>
+<script src="js/backwall.js"></script>
 </html>

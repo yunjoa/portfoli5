@@ -23,8 +23,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html{
+  // height: 100%;
+  width: 100%;
+}
 body {
 	line-height: 1;
+  height: 100%;
+  width: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -55,11 +61,14 @@ $size: 11;
 }
 
 
+.container{
+  width: 100%;
+  height: 100%;
+}
 section{
   width:100%;
   min-height: 100vh;
   border: 2px solid green;
-  font-size: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,10 +77,23 @@ section{
 }
 
 .side-text{
-  font-size: 1rem;
+  font-size: 14px;
   writing-mode: tb;
   position: absolute;
+  a{
+    text-decoration: none;
+    ion-icon{
+      font-size: 22px;
+      padding-bottom: 8px;
+      color: #222;
+    }
+    ion-icon:hover{
+      opacity: 0.5;
+    }
+  }
 }
+
+
 
 .left{
   left: 10vw;
@@ -83,7 +105,7 @@ section{
 nav{
   width: 100%;
   height: calc(30px + (2vw *2));
-  background-color: yellow;
+  // background-color: yellow;
   position: fixed;
   z-index: 10;
   align-items: baseline;
@@ -98,10 +120,17 @@ nav{
     transition: visibility 0s, opacity 1s ease-out;
 
     .menu{
-      padding: 20px;
-      font-family: "Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+      padding: 4px 20px;
+      font-family: "hind","Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
       font-weight: 700;
       letter-spacing: -0.3px;
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      a:hover {
+        color: #555;
+      }
     }
   }
   .hide {
@@ -123,4 +152,262 @@ nav{
   top: 0;
   width: 50%;
   margin: 0 auto;
+}
+
+
+.intro-wrap{
+  position: relative;
+  // font-size: 100px;
+}
+
+.introWord{
+  padding: 50px;
+  font-family: 'Mrs Sheppards', cursive;
+  font-size: 200px;
+}
+// Rolling Stone Animation
+
+
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #023F92;
+  width: 50vmax;
+  z-index: -1;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+  40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+  78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+  80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+// footer
+
+footer{
+  width: 100%;
+  // height: 250px;
+  background-color: #3e3e3e;
+  color: white;
+  padding: 50px 50px 30px ;
+}
+
+.footerContents{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 30px;
+  position: relative;
+  opacity : 0.9;
+
+}
+.footerContents::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity : 0.5;
+  position: absolute;
+  top: 95%;
+  left: 0;
+
+}
+
+.footerIntro{
+  width: 50%;
+  p:nth-child(1){
+    font-family: 'Mrs Sheppards';
+    font-size: 36px;
+    color: rgb(227, 227, 227);
+    padding-bottom: 24px;
+    display: inline-block;
+  }
+  p{
+    color: rgb(227, 227, 227);
+    line-height: 22px;
+    font-size: 14px;
+  }
+}
+
+.footerLink{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  p{
+    width: 20%;
+    text-align: right;
+    padding-top: 10px;
+    font-weight: 500;
+    a{
+      color: rgb(227, 227, 227);
+      text-decoration: none;
+    }
+  }
+}
+
+.copyright{
+  text-align: right;
+  font-size: 12px;
+  padding: 10px 0 0;
+  color: rgb(227, 227, 227);
+  opacity : 0.9;
+
+}
+
+
+
+
+
+
+// click Event
+
+span {
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+span::after {
+  content: attr(data-text);
+  position: absolute;
+  border-radius: 10px;
+  padding: 6px 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 100ms ease-in;
+}
+
+span:active::after { transform: scale(0.9); }
+
+.pumping::after {
+  animation: pumping 100ms ease-in-out infinite;
+}
+
+@keyframes pumping {
+  50% { transform: scale(0.95); }
+}
+
+.shape {
+  --size: 8px;
+  position: absolute;
+  top: calc(50% - var(--size));
+  left: calc(50% - var(--size));
+  width: calc(var(--size) * 2);
+  height: calc(var(--size) * 2);
+  animation: popup var(--d) cubic-bezier(.08,.56,.53,.98) forwards;
+}
+
+.square {
+  border-radius: 4px;
+  background-color: var(--c);
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: var(--c);
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  background-color: none;
+  border-top: var(--size) solid transparent;
+  border-bottom: calc(var(--size) * 2) solid var(--c);
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+}
+
+.heart {
+  --size: 6px;
+  background-color: var(--c);
+}
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c);
+  border-radius: 50%;
+}
+.heart::before { left: -50%; }
+.heart::after { top: -50%; }
+
+@keyframes popup {
+  0% { opacity: 0; }
+  60% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) rotate(var(--r));
+  }
+}
+
+
+
+
+
+// 테스트
+
+section {
+  // min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  // max-width: 1000px;
+  margin: auto;
+  place-items: center;
+}
+
+img {
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+}
+section:first-child img {
+  position: absolute;
+}
+
+h1 {
+  display: flex;
+  font-size: 4rem;
+  z-index: 2;
+  line-height: 1.2;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
+
+.credit {
+  font-family: Termina, sans-serif;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.credit a {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
 }
