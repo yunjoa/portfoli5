@@ -1,9 +1,3 @@
-ScrollSmoother.create({
-  smooth: 2,
-  effects: true,
-  smoothTouch: 0.1,
-});
-
 /* Logo to header animation */
 let logoTl = gsap.timeline({
   scrollTrigger: {
